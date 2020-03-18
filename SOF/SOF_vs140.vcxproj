@@ -31,7 +31,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>SOF</ProjectName>
-    <ProjectGuid>{240E83C3-368D-11DB-9FBC-00123FC423B5}</ProjectGuid>
+    <ProjectGuid>{91874634-1700-4F17-9770-6C21AC17647F}</ProjectGuid>
     <RootNamespace>SOF</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
