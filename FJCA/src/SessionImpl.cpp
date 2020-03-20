@@ -142,6 +142,17 @@ Poco::Any SessionImpl::getConnectionTimeout(const std::string& prop)
 	return Poco::Any(_timeout/1000);
 }
 
+bool SessionImpl::FJCA_initKey()
+{
+	typedef bool(__stdcall *initKey)();
+
+	initKey fn = (initKey)sl.getSymbol("initKey");
+	
+	bool ret = false;
+	if(fn) ret = fn();
+	return ret;
+}
+
 bool SessionImpl::login(const std::string& passwd)
 {
 	return FJCA_OpenKeyWithPin(passwd.c_str());
@@ -158,13 +169,9 @@ std::string SessionImpl::getUserList()
 	return "fjca||fjca_Container";
 }
 
-
 std::string SessionImpl::getCertBase64String(short ctype)
 {
-	typedef bool(__stdcall *FJCA_initKey)();
-
-	FJCA_initKey fn = (FJCA_initKey)sl.getSymbol("initKey");
-	if(fn) fn();
+	FJCA_initKey();
 
 	//enum certType { sign = 1, crypto };
 	assert(sign <= ctype && ctype <= crypto);
@@ -223,6 +230,8 @@ std::string SessionImpl::getSerialNumber()
 
 std::string SessionImpl::getKeyID()
 {
+	FJCA_initKey();
+	
 	char keyid[128] = { 0 };
 
 	bool ret = FJCA_GetKeyDevID(keyid, 128);

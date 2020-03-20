@@ -105,6 +105,7 @@ public:
 	bool verifySignByP7(const std::string& textual, const std::string& signature);
 
 protected:
+	bool FJCA_initKey();
 	void setConnectionTimeout(const std::string& prop, const Poco::Any& value);
 	Poco::Any getConnectionTimeout(const std::string& prop);
 	Poco::SharedLibrary sl;
