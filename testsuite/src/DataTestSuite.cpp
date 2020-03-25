@@ -17,7 +17,7 @@ CppUnit::Test* DataTestSuite::suite()
 {
 	CppUnit::TestSuite* pSuite = new CppUnit::TestSuite("DataTestSuite");
 
-	pSuite->addTest(DataTest::suite());
+	//pSuite->addTest(DataTest::suite());
 	//pSuite->addTest(SessionPoolTest::suite());
 
 	return pSuite;

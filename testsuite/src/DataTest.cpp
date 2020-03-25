@@ -76,15 +76,15 @@ void DataTest::testSession()
 	assert ("test:///Cs" == sess2.uri());
 
 	sess.close();
-	assert (!sess.getFeature("connected"));
+	//assert (!sess.getFeature("connected"));
 	assert (!sess.isConnected());
 
 	sess.open();
-	assert (sess.getFeature("connected"));
+	//assert (sess.getFeature("connected"));
 	assert (sess.isConnected());
 
 	sess.reconnect();
-	assert (sess.getFeature("connected"));
+	//assert (sess.getFeature("connected"));
 	assert (sess.isConnected());
 }
 
@@ -97,78 +97,13 @@ void DataTest::testStatementFormatting()
 
 void DataTest::testFeatures()
 {
-	Session sess(SessionFactory::instance().create("test", "cs"));
 	
-	sess.setFeature("f1", true);
-	assert (sess.getFeature("f1"));
-	assert (sess.getFeature("f2"));
-	
-	try
-	{
-		sess.setFeature("f2", false);
-	}
-	catch (NotImplementedException&)
-	{
-	}
-	
-	sess.setFeature("f3", false);
-	assert (!sess.getFeature("f2"));
-	
-	try
-	{
-		sess.setFeature("f3", true);
-	}
-	catch (NotImplementedException&)
-	{
-	}
-	
-	try
-	{
-		sess.setFeature("f4", false);
-	}
-	catch (NotSupportedException&)
-	{
-	}
 }
 
 
 void DataTest::testProperties()
 {
-	Session sess(SessionFactory::instance().create("test", "cs"));
-		
-	sess.setProperty("p1", 1);
-	Poco::Any v1 = sess.getProperty("p1");
-	assert (Poco::AnyCast<int>(v1) == 1);
-	Poco::Any v2 = sess.getProperty("p2");
-	assert (Poco::AnyCast<int>(v2) == 1);
 	
-	try
-	{
-		sess.setProperty("p2", 2);
-	}
-	catch (NotImplementedException&)
-	{
-	}
-	
-	sess.setProperty("p3", 2);
-	v1 = sess.getProperty("p2");
-	assert (Poco::AnyCast<int>(v1) == 2);
-	
-	try
-	{
-		sess.setProperty("p3", 3);
-	}
-	catch (NotImplementedException&)
-	{
-	}
-	
-	try
-	{
-		sess.setProperty("p4", 4);
-	}
-	catch (NotSupportedException&)
-	{
-	}
 }
 
 

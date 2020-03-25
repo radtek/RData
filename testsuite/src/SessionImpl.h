@@ -91,6 +91,36 @@ public:
 		/// Sets/gets the connected property.
 		/// This is normally done by implementation
 		/// when a database connection loss is detected.
+	/// Returns the name of the connector.
+	virtual const std::string& contianerName() const ;
+
+	virtual bool login(const std::string& passwd) ;
+
+	virtual bool changePW(const std::string& oldCode, const std::string& newCode) ;
+
+	virtual std::string getUserList() ;
+
+	virtual std::string getCertBase64String(short ctype) ;
+
+	virtual int getPinRetryCount() ;
+
+	virtual std::string getCertInfo(const std::string& base64, int type) ;
+
+	virtual std::string getSerialNumber() ;
+
+	virtual std::string getKeyID() ;
+
+	virtual std::string encryptData(const std::string& paintText, const std::string& base64) ;
+
+	virtual std::string decryptData(const std::string& encryptBuffer) ;
+
+	virtual std::string signByP1(const std::string& message) ;
+
+	virtual bool verifySignByP1(const std::string& base64, const std::string& msg, const std::string& signature) ;
+
+	virtual std::string signByP7(const std::string& textual, int mode) ;
+
+	virtual bool verifySignByP7(const std::string& textual, const std::string& signature) ;
 
 	void setF(const std::string& name, bool value);
 	bool getF(const std::string& name);

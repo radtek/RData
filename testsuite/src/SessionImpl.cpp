@@ -164,5 +164,55 @@ Poco::Any SessionImpl::getP(const std::string& name)
 	return _p;
 }
 
+const std::string& SessionImpl::contianerName() const 
+{
+	return "";
+}
+
+bool SessionImpl::login(const std::string& passwd) 
+{
+	return false;
+}
+
+bool SessionImpl::changePW(const std::string& oldCode, const std::string& newCode) 
+{
+	return false;
+}
+
+std::string SessionImpl::getUserList() 
+{
+	return "";
+}
+
+std::string SessionImpl::getCertBase64String(short ctype) 
+{
+	return "";
+}
+
+int SessionImpl::getPinRetryCount() 
+{
+	return 1;
+}
+
+std::string SessionImpl::getCertInfo(const std::string& base64, int type) 
+{
+	return "";
+}
+
+std::string SessionImpl::getSerialNumber() { return ""; }
+
+std::string SessionImpl::getKeyID() { return ""; }
+
+std::string SessionImpl::encryptData(const std::string& paintText, const std::string& base64) { return ""; }
+
+std::string SessionImpl::decryptData(const std::string& encryptBuffer) { return ""; }
+
+std::string SessionImpl::signByP1(const std::string& message) { return ""; }
+
+bool SessionImpl::verifySignByP1(const std::string& base64, const std::string& msg, const std::string& signature) { return false; }
+
+std::string SessionImpl::signByP7(const std::string& textual, int mode) { return ""; }
+
+bool SessionImpl::verifySignByP7(const std::string& textual, const std::string& signature) { return false; }
 
 } } } // namespace Poco::Data::Test
