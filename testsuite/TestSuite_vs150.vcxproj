@@ -117,6 +117,7 @@
     <ClInclude Include="src\DataTest.h" />
     <ClInclude Include="src\DataTestSuite.h" />
     <ClInclude Include="src\SessionImpl.h" />
+    <ClInclude Include="src\WebSocketTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Connector.cpp" />
@@ -124,6 +125,7 @@
     <ClCompile Include="src\DataTestSuite.cpp" />
     <ClCompile Include="src\Driver.cpp" />
     <ClCompile Include="src\SessionImpl.cpp" />
+    <ClCompile Include="src\WebSocketTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

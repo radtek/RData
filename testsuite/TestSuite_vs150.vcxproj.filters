@@ -43,6 +43,9 @@
     <Filter Include="SessionPooling\Source Files">
       <UniqueIdentifier>{f8c92f6d-caed-4a91-94b5-6930da16c9dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WebSocketTest">
+      <UniqueIdentifier>{85e38dae-1f7f-4b07-ad3f-f06d81d307f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DataTest.h">
@@ -56,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="src\SessionImpl.h">
       <Filter>TestSession\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WebSocketTest.h">
+      <Filter>WebSocketTest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="src\SessionImpl.cpp">
       <Filter>TestSession\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WebSocketTest.cpp">
+      <Filter>WebSocketTest</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

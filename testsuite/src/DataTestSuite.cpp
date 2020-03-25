@@ -9,8 +9,9 @@
 
 
 #include "DataTestSuite.h"
-#include "DataTest.h"
-//#include "SessionPoolTest.h"
+// #include "DataTest.h"
+// #include "SessionPoolTest.h"
+#include "WebSocketTest.h"
 
 
 CppUnit::Test* DataTestSuite::suite()
@@ -19,6 +20,7 @@ CppUnit::Test* DataTestSuite::suite()
 
 	//pSuite->addTest(DataTest::suite());
 	//pSuite->addTest(SessionPoolTest::suite());
+	pSuite->addTest(WebSocketTest::suite());
 
 	return pSuite;
 }
