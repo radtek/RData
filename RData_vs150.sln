@@ -71,7 +71,6 @@ Global
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.debug_static_mt|Win32.ActiveCfg = debug_shared|Win32
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.debug_static_mt|Win32.Build.0 = debug_shared|Win32
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.release_shared|Win32.ActiveCfg = release_shared|Win32
-		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.release_shared|Win32.Build.0 = release_shared|Win32
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.release_static_md|Win32.ActiveCfg = release_shared|Win32
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.release_static_md|Win32.Build.0 = release_shared|Win32
 		{1813A463-E349-4FEA-8A8E-4A41E41C0DC7}.release_static_mt|Win32.ActiveCfg = release_shared|Win32
